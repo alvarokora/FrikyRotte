@@ -14,3 +14,37 @@ ion-content {
     height: 100%; /* Asegura que el contenedor ocupe todo el espacio disponible */
  }
 
+$primary-color: #6a0dad;
+$secondary-color: #ffffff;
+$accent-color: #007bff;
+
+.login {
+  background-color: $primary-color;
+  height: 100%;
+  color: $secondary-color;
+  position: relative;
+
+  .input-container {
+    ion-item {
+      background-color: $secondary-color;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    ion-input {
+      color: $primary-color;
+    }
+  }
+
+  .button-container {
+    ion-button {
+      background-color: $accent-color;
+      color: $secondary-color;
+      margin-bottom: 10px;
+      
+      &:hover {
+        background-color: darken($accent-color, 10%);
+      }
+    }
+  }
+}

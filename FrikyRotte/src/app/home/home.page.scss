@@ -55,3 +55,43 @@ ion-icon {
   font-size: 40px; /* Tamaño de los iconos */
   color: #000; /* Color de los iconos */
 }
+
+// Definición de colores
+
+$primary-color: #6a0dad;
+$secondary-color: #ffffff;
+$accent-color: #007bff;
+
+#icon-button {
+  display: flex;
+  align-items: center;
+  ion-icon {
+    font-size: 24px;
+    color: $accent-color;
+    margin-right: 8px;
+  }
+  p {
+    margin: 0;
+    font-size: 14px;
+    color: $secondary-color;
+  }
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; 
+}
+
+#controller-button {
+  font-size: 24px;
+  color: $primary-color;
+  
+  i {
+    font-size: 24px;
+  }
+  
+  &:hover {
+    color: darken($primary-color, 10%);
+  }
+}

@@ -1,5 +1,10 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button fill="clear" (click)="goBack()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>Usuario</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -7,6 +12,5 @@
 <ion-content [fullscreen]="true">
   <div class="content-container">
     <p>Bienvenido, {{ email }}</p>
-    <!-- Aquí puedes agregar más contenido relacionado con el usuario -->
   </div>
 </ion-content>
