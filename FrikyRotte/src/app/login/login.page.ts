@@ -9,26 +9,25 @@ import { SessionManager } from 'src/managers/SessionManager';
 })
 export class LoginPage implements OnInit {
 
+  email: string = '';
+  password: string = '';
+
   constructor(private router: Router, private sessionManager: SessionManager) { }
 
-    user: string = '';
-    password: string = '';
-
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   onLoginButtonPressed() {
-    if(this.sessionManager.performLogin(this.user, this.password)) {
-      this.router.navigate(['/home'])
+    if (this.sessionManager.performLogin(this.email, this.password)) {
+      // Navega a la vista de Home y pasa el parámetro email
+      this.router.navigate(['/home'], { queryParams: { email: this.email } });
     } else {
-      this.user=''
-      this.password=''
-      alert('Las credenciales ingresadas son inválidas.')
+      this.email = '';
+      this.password = '';
+      alert('Las credenciales ingresadas son inválidas.');
     }
   }
 
   onRegisterButtonPressed() {
-    this.router.navigate(['/register'])
+    this.router.navigate(['/register']);
   }
-
 }
