@@ -3,7 +3,6 @@
     <ion-buttons slot="start">
       <ion-button fill="clear" id="icon-button" (click)="onIconButtonClick()">
         <ion-icon name="person-circle-outline"></ion-icon>
-        <p>Email recibido: {{ email }}</p>
       </ion-button>
     </ion-buttons>
     <ion-title>
@@ -15,23 +14,14 @@
   <!-- Contenido aquí -->
 </ion-content>
 
-<ion-footer>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <div class="footer-icons">
-        <ion-button fill="clear" id="controller-button">
-          <i class="fa-solid fa-gamepad"></i> <!-- Cambié a fa-gamepad -->
-        </ion-button>
-        
-        <ion-button fill="clear" id="controller-button">
-          <i class="fa-solid fa-book"></i> <!-- Cambié a fa-gamepad -->
-        </ion-button>
-
-        <ion-button fill="clear" id="controller-button">
-          <i class="fa-solid fa-film"></i> <!-- Cambié a fa-gamepad -->
-        </ion-button>
-        
-      </div>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-footer>
+<ion-segment value="heart">
+  <ion-segment-button value="call" (click)="onIconHomeButtonClick()">
+    <ion-icon name="call"></ion-icon>
+  </ion-segment-button>
+  <ion-segment-button value="heart">
+    <ion-icon name="heart"></ion-icon>
+  </ion-segment-button>
+  <ion-segment-button value="pin">
+    <ion-icon name="pin"></ion-icon>
+  </ion-segment-button>
+</ion-segment>

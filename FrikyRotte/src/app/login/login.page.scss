@@ -14,37 +14,27 @@ ion-content {
     height: 100%; /* Asegura que el contenedor ocupe todo el espacio disponible */
  }
 
-$primary-color: #6a0dad;
-$secondary-color: #ffffff;
-$accent-color: #007bff;
+ /*
+.bg{
+  position: absolute;
+  width: 100%;
+  height: 100lh;
+  left: 0px;
+  top: 0px;
+  
+  background: linear-gradient(180deg, rgba(125, 76, 152, 0.16) 0%, rgba(0, 0, 0, 0.8) 100%);
+}
+*/
 
-.login {
-  background-color: $primary-color;
-  height: 100%;
-  color: $secondary-color;
-  position: relative;
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
 
-  .input-container {
-    ion-item {
-      background-color: $secondary-color;
-      border-radius: 8px;
-      margin-bottom: 15px;
-    }
-
-    ion-input {
-      color: $primary-color;
-    }
-  }
-
-  .button-container {
-    ion-button {
-      background-color: $accent-color;
-      color: $secondary-color;
-      margin-bottom: 10px;
-      
-      &:hover {
-        background-color: darken($accent-color, 10%);
-      }
-    }
-  }
+.circular-logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
 }

@@ -27,11 +27,15 @@ const routes: Routes = [
     path: 'usuario',
     loadChildren: () => import('./usuario/usuario.module').then(m => m.UsuarioPageModule)
   },
-  // Agrega aquí cualquier otra ruta o módulo adicional que necesites
+  {
+    path: 'detalle',
+    loadChildren: () => import('./detalle/detalle.module').then( m => m.DetallePageModule)
+  },
   {
     path: '**',
     redirectTo: 'splash' // Ruta comodín para redirigir cualquier ruta desconocida a la página de splash
-  }
+  },
+
 ];
 
 @NgModule({

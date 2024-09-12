@@ -23,4 +23,8 @@ export class HomePage implements OnInit {
     // Redirige al usuario a la página de usuario y pasa el parámetro email
     this.router.navigate(['/usuario'], { queryParams: { email: this.email } });
   }
+
+  onIconHomeButtonClick(){
+    this.router.navigate(['/detalle']);
+  }
 }
